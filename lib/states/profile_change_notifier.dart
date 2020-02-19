@@ -33,7 +33,7 @@ class UserModel extends ProfileChangeNotifier{
 
 }
 
-class TemeModel extends ProfileChangeNotifier{
+class ThemeModel extends ProfileChangeNotifier{
   //获取当前主题，如果为设置主题，则默认使用蓝色主题
   ColorSwatch get theme => Global.themes
       .firstWhere((e) => e.value == _profile.theme,orElse: () => Colors.blue);
@@ -48,7 +48,7 @@ class TemeModel extends ProfileChangeNotifier{
   }
 }
 
-class LocalModel extends ProfileChangeNotifier{
+class LocaleModel extends ProfileChangeNotifier{
   //获取当前用户的APP语言配置Locale类，如果为null，则语言跟随系统语言
   Locale getLocale(){
     if(_profile.locale == null) return null;
