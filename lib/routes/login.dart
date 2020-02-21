@@ -95,7 +95,7 @@ class _LoginRouteState extends State<LoginRoute>{
   void _onLogin() async{
      //提交前，先验证各个表单字段是否合法
     if ((_formKey.currentState as FormState).validate()) {
-      showLoading(context);
+      showLoading(context,"登录中...");
       User user;
       try {
         user = await Git(context)

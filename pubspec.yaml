@@ -14,7 +14,7 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -31,6 +31,8 @@ dependencies:
   dio_cookie_manager: ^1.0.0
   provider: ^4.0.4
   fluttertoast: ^3.1.3
+  flukit: ^1.0.2
+  cached_network_image: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +49,11 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - imgs/avatar-default.png
+    - imgs/logo_light.png
+    - imgs/logo_dark.png
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -64,10 +71,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+
+  fonts:
+    - family: myIcon
+      fonts:
+        - asset: fonts/iconfont.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

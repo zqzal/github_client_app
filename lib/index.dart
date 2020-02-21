@@ -4,3 +4,4 @@ export 'states/index.dart';
 export 'routes/index.dart';
 export 'i10n/localization_intl.dart';
 export 'package:provider/provider.dart';
+export 'widgets/index.dart';

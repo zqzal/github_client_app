@@ -1,5 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
+Widget gmAvatar(String url,{
+  double width = 30,
+  double height,
+  BoxFit fit,
+  BorderRadius borderRadius,
+}){
+  var placeholder = Image.asset(
+    "imgs/avatar-defaul.png", //头像默认值
+    width: width,
+    height: height,
+  );
+  return ClipRRect(
+    borderRadius: borderRadius ?? BorderRadius.circular(2),
+    child: CachedNetworkImage(
+      width: width,
+      height: height,
+      fit: fit,
+      imageUrl: url,
+      placeholder: (context,url) => placeholder,
+      errorWidget: (context, url, error) =>placeholder,
+    ),
+  );
+}
+
 void showToast(String text,{
   gravity: ToastGravity.CENTER,
   toastLength: Toast.LENGTH_SHORT,
